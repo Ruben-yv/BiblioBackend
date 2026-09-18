@@ -63,6 +63,7 @@ public class PrestamoServiceImpl implements PrestamoService {
         prestamo.setSocio(socio);
         prestamo.setFecha(LocalDateTime.now());
         prestamo.setEstado(EstadoPrestamo.REGISTRADO);
+        prestamo.setFechaDevolucionPrevista(LocalDate.now().plusDays(7));
 
         BigDecimal totalValorizado = BigDecimal.ZERO;
 
